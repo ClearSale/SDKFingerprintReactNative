@@ -1,0 +1,24 @@
+{
+  "name": "react-native-clear-sale-module",
+  "version": "1.0.0-rc.1",
+  "summary": "Clear sale module",
+  "homepage": "http://#readme",
+  "license": "MIT",
+  "authors": "Clear Sale <clearsale@clearsale.com.br> (http://clearsale.com.br)",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "git": "http://.git",
+    "tag": "1.0.0-rc.1"
+  },
+  "source_files": "ios/**/*.{h,m,mm}",
+  "dependencies": {
+    "React": [
+
+    ],
+    "CSBehavior": [
+
+    ]
+  }
+}

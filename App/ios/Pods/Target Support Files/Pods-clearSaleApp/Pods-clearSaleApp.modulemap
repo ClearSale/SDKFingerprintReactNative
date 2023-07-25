@@ -1,0 +1,6 @@
+module Pods_clearSaleApp {
+  umbrella header "Pods-clearSaleApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+module Pods_clearSaleApp_clearSaleAppTests {
+  umbrella header "Pods-clearSaleApp-clearSaleAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
