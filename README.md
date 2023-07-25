@@ -6,68 +6,25 @@
 Para executar esse projeto de exemplo é necessário possuir:
 - Node.js >= 10.19.0
 - React Native >= 0.63.2
-- react-navigation/native: 5.7.3
-- react-navigation/stack: 5.9.0
 
 ## 🤔 Explicação das dependências
 1. @behavior-analytics-sdk/react-native-clear-sale-module (1.0.1-rc.2)
 > Essa é uma dependência para o módulo de integração com a API da ClearSale. É utilizado para fazer a integração com o serviço de análise de risco da ClearSale.
 
-2. @react-native-community/masked-view (^0.1.10)
-> Essa é uma dependência para a implementação de máscaras em elementos de interface do usuário. É utilizado para aplicar máscaras em campos de formulário, por exemplo.
-
-3. @react-navigation/native (^5.7.3)
+2. @react-navigation/native (^5.7.3)
 > Essa é uma dependência para a biblioteca de navegação do React Native. É utilizada para navegar entre as telas da aplicação.
 
-4. @react-navigation/stack (^5.9.0)
+3. @react-navigation/stack (^5.9.0)
 > Essa é uma dependência para a implementação de pilhas de navegação na biblioteca de navegação do React Native. É utilizada para implementar a navegação entre as telas da aplicação.
 
-5. react (16.13.1)
-> Essa é uma dependência para a biblioteca React, utilizada para criar a interface do usuário da aplicação.
+## ℹ️ Informações adicionais
+### Como limpar o projeto android:
+Acesse a pasta App/android e execute o comando:
+./gradlew clean
 
-6. react-native (0.63.2)
-> Essa é uma dependência para a plataforma React Native, utilizada para desenvolver aplicativos móveis para iOS e Android.
-
-7. react-native-geolocation-service (^5.0.0)
-> Essa é uma dependência para a obtenção da localização do dispositivo. É utilizada para obter a localização do usuário e enviar essa informação para a API da ClearSale.
-
-8. react-native-gesture-handler (^1.7.0)
-> Essa é uma dependência para a implementação de gestos na interface do usuário. É utilizada para implementar ações como deslizar para a esquerda ou para a direita em elementos de interface.
-
-9. react-native-safe-area-context (^3.1.4)
-> Essa é uma dependência para a obtenção da área segura em dispositivos com o sistema operacional iOS. É utilizada para ajustar a interface do usuário em dispositivos com telas diferentes.
-
-10. react-native-screens (^2.10.1)
-> Essa é uma dependência para a implementação de telas na interface do usuário. É utilizada para implementar as telas da aplicação.
-
-### DevDependencies
-11. @babel/core (^7.8.4)
-> Essa é uma dependência para o transpilador Babel, utilizado para converter o código JavaScript em um formato compatível com a plataforma.
-
-12. @babel/runtime (^7.8.4)
-> Essa é uma dependência para o runtime do Babel, utilizado para executar o código transpilado.
-
-13. @react-native-community/eslint-config (^1.1.0)
-> Essa é uma dependência para a configuração do ESLint, utilizado para verificar a qualidade do código.
-
-14. babel-jest (^25.1.0)
-> Essa é uma dependência para a integração do Jest com o Babel, utilizado para executar testes unitários no código.
-
-15. eslint (^6.5.1)
-> Essa é uma dependência para o ESLint, utilizado para verificar a qualidade do código.
-
-16. jest (^25.1.0)
-> Essa é uma dependência para o framework Jest, utilizado para executar testes unitários no código.
-
-17. metro-react-native-babel-preset (^0.59.0)
-> Essa é uma dependência para o preset do Babel, utilizado para converter o código JavaScript em um formato compatível com a plataforma React Native.
-
-18. react-test-renderer (16.13.1)
-> Essa é uma dependência para a biblioteca de teste React, utilizada para testar componentes React sem a necessidade de renderizá-los em um navegador ou dispositivo móvel.
-
-###Jest
-19. preset: react-native
-> Essa é uma configuração para o framework Jest, utilizado para executar testes unitários no código. Essa configuração define as opções de teste para a plataforma React Native.
+### Como gerar o .APK
+Acesar a pasta App e executar o comando:
+npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/build/intermediates/res/merged/release/ && rm -rf android/app/src/main/res/drawable-* && rm -rf android/app/src/main/res/raw/* && cd android && ./gradlew assembleRelease && cd ..
 
 ## ✨ Para mais detalhes
 Acesse a documentação completa com informações sobre implementação da ferramenta Behavior Analytics SDK React Native em: 
